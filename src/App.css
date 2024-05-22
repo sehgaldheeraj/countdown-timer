@@ -1,38 +1,105 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: -webkit-fill-available;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  background: linear-gradient(
+    to top right,
+    rgb(6 47 255 / 58%) 0%,
+    rgb(217 1 173 / 70%) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  color: whitesmoke;
+}
+h1 {
+  margin-bottom: -5px;
+  font-size: 70px;
+}
+.subheading {
+  color: rgb(97 6 255);
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.target-input {
+  padding: 9px;
+  width: max-content;
+  border-radius: 8px;
+  border: 1px white solid;
+  margin: 10px;
+}
+.target-input input {
+  border: none;
+  background-color: inherit;
+  color: whitesmoke;
+  outline: whitesmoke;
+}
+
+.target-input input :active {
+  border: none;
+}
+
+.btn {
+  background-color: inherit;
+  border: 1px white solid;
+  padding: 10px;
+  border-radius: 5px;
+  width: 110px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.countdown {
+  display: flex;
+  margin-top: 25px;
+}
+.countdown-box {
+  padding: 9px;
+  margin: 8px;
+  background: linear-gradient(
+    to top right,
+    rgb(6 191 255 / 56%) 0%,
+    rgb(221 1 217 / 56%) 100%
+  );
+  border-radius: 9px;
+  width: 90px;
+  height: 90px;
+  box-shadow: 3px 3px 9px #1a1a2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.count {
+  font-size: xxx-large;
+  font-weight: bold;
+}
+.label {
+  color: silver;
+  font-weight: lighter;
+}
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 35px;
   }
-  to {
-    transform: rotate(360deg);
+  .countdown-box {
+    width: 36px;
+    height: auto;
+  }
+  .count {
+    font-size: xx-large;
+  }
+  .label {
+    font-size: x-small;
   }
 }
